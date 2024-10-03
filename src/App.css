@@ -1,38 +1,73 @@
-.App {
+.app-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  transition: background 0.5s ease;
+  background: url('./images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* This ensures that the container takes full width for centering */
+}
+
+.search-container input {
+  padding: 12px;
+  font-size: 18px;
+  width: 300px; /* Increase the width of the input */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px; /* Add some space between the input and the button */
+}
+
+.search-container button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3; /* Darken the button color on hover */
+}
+
+.weather-info {
+  font-size: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.error-message {
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sunny {
+  background: url('./images/sunny.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.rainy {
+  background: url('./images/rainy.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cloudy {
+  background: url('./images/cloudy.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.default-weather {
+  background: url('./images/default.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
